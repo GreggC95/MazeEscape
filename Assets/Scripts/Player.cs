@@ -38,4 +38,20 @@ public class Player : MonoBehaviour {
 
 
     }
+
+    // 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        //check if the thing we bumped into is a enemy
+        if (collision.collider.GetComponent<Enemy>())
+        {
+            // destory enemy
+            Destroy(gameObject);
+        }
+
+
+    }
+
+
 }
